@@ -2,19 +2,19 @@
   "app_name": "Components",
   "routes": [
     {
-      "ruta": "alert",
+      "route": "alert",
       "icon": "add_alert",
-      "texto": "Alertas"
+      "text": "Alertas"
     },
     {
-      "ruta": "avatar",
+      "route": "avatar",
       "icon": "accessibility",
-      "texto": "Avatars"
+      "text": "Avatars"
     },
     {
-      "ruta": "card",
+      "route": "card",
       "icon": "folder_open",
-      "texto": "Cards - Tarjetas"
+      "text": "Cards - Tarjetas"
     }
   ]
 }
