@@ -10,13 +10,21 @@ class CardPage extends StatelessWidget {
       ),
       body: ListView(
         padding: EdgeInsets.all(10.0),
-        children: <Widget>[_cardType1()],
+        children: <Widget>[
+          _cardType1(),
+          SizedBox(
+            height: 30.0,
+          ),
+          _cardType2()
+        ],
       ),
     );
   }
 
   Widget _cardType1() {
     return Card(
+      elevation: 5.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       child: Column(
         children: <Widget>[
           ListTile(
@@ -36,6 +44,29 @@ class CardPage extends StatelessWidget {
                 onPressed: () {},
               )
             ],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _cardType2() {
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      child: Column(
+        children: <Widget>[
+          FadeInImage(
+            image: NetworkImage(
+                'https://cnet4.cbsistatic.com/img/8OQnCkn6L4qBDrBQzWxHtmGODTk=/2019/11/01/45b3b242-b28b-4b10-ba62-f441c18de3f5/20190620-145842.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 250,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('Sample text'),
           )
         ],
       ),
